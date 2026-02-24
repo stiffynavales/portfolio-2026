@@ -31,9 +31,9 @@ export default function Footer() {
 
             <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-12 w-full pt-12 border-t border-white/5">
                 <div className="flex gap-8 text-xs sm:text-sm font-bold tracking-widest text-neutral-400">
-                    <a href="#" className="hover:text-white transition-colors uppercase">LinkedIn</a>
-                    <a href="#" className="hover:text-white transition-colors uppercase">GitHub</a>
-                    <a href="#" className="hover:text-white transition-colors uppercase">Email</a>
+                    <a href="https://www.linkedin.com/in/stiffy-navales-b10555179/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors uppercase">LinkedIn</a>
+                    <a href="https://github.com/stiffynavales" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors uppercase">GitHub</a>
+                    <a href="#contact" className="hover:text-white transition-colors uppercase">Email</a>
                 </div>
 
                 <div className="text-left md:text-right text-[10px] sm:text-xs font-medium tracking-[0.2em] text-neutral-500 uppercase flex flex-col gap-1">

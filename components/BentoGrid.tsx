@@ -82,7 +82,7 @@ export default function BentoGrid() {
     };
 
     return (
-        <section className="relative w-full bg-[#0a0a0a] py-24 px-6 md:px-24 z-20">
+        <section id="contact" className="relative w-full bg-[#0a0a0a] py-16 md:py-24 px-6 md:px-24 z-20">
             <div className="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-4 md:auto-rows-[160px]">
 
                 {/* 1. Scrolling Images replacing the single static image */}
