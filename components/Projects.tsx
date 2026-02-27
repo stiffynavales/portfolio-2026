@@ -1,62 +1,37 @@
 'use client';
 
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import ComingSoonPopup from './ComingSoonPopup';
+import Link from 'next/link';
+import { projects } from '@/lib/projectsData';
 
 export default function Projects() {
-    const [isComingSoonOpen, setIsComingSoonOpen] = useState(false);
     const targetRef = useRef<HTMLDivElement>(null);
+    const innerRef = useRef<HTMLDivElement>(null);
+    const [endX, setEndX] = useState(0);
+
     const { scrollYProgress } = useScroll({
         target: targetRef,
-    }); // we'll use default offset so it tracks the element's scroll naturally
+    });
 
-    // Calculate x transform based on screen width
-    // On mobile we want more movement since the cards are stacked or offset
-    const x = useTransform(scrollYProgress, [0, 1], ["0%", "-70%"]);
+    // Measure the inner container and calculate how far it needs to scroll
+    useEffect(() => {
+        const measure = () => {
+            if (innerRef.current) {
+                const totalWidth = innerRef.current.scrollWidth;
+                const viewportWidth = window.innerWidth;
+                setEndX(-(totalWidth - viewportWidth));
+            }
+        };
+        measure();
+        window.addEventListener('resize', measure);
+        return () => window.removeEventListener('resize', measure);
+    }, []);
 
-    const projects = [
-        {
-            year: "2025",
-            title: "Harmony Stream",
-            category: "Landing Page",
-            description: "A landing page for a music streaming service.",
-            tags: ["Figma", "UI/UX", "Landing Page", "Wordpress", "AI"],
-            link: "#",
-            image: "/lp-harmonystream.png"
-        },
-        {
-            year: "2025",
-            title: "Whey Protein",
-            category: "Landing Page",
-            description: "A Figma product landing page design of a whey protein product.",
-            tags: ["Figma", "UI/UX", "Landing Page", "Wordpress", "AI"],
-            link: "#",
-            image: "/lp-whey.png"
-        },
-        {
-            year: "2025",
-            title: "Car Variants Landing Page",
-            category: "Landing Page",
-            description: "A Landing page for Isuzu D-max variants, lets you browse through different variants/models of the product.",
-            tags: ["Figma", "UI/UX", "Landing Page", "Wordpress", "AI", "Protoype"],
-            link: "#",
-            image: "/ptype-variants.png"
-
-        },
-        {
-            year: "2026",
-            title: "Photography Studio Website",
-            category: "Website Application",
-            description: "A website for a photography studio. I used several AI tools to generate the webs design, contents and functionality.",
-            tags: ["Figma", "UI/UX", "Google Studio", "Whisk", "AI", "Hosting", "Stitch"],
-            link: "#",
-            image: "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=1548&auto=format&fit=crop"
-        }
-    ];
+    const x = useTransform(scrollYProgress, [0, 1], [0, endX]);
 
     return (
-        <section ref={targetRef} className="relative h-[250vh] bg-[#0a0a0a] z-20">
+        <section ref={targetRef} className="relative h-[180vh] bg-[#0a0a0a] z-20">
             <div className="sticky top-0 h-screen flex flex-col justify-center overflow-hidden">
                 <div className="w-full max-w-[1400px] mx-auto px-6 md:px-24">
                     <h3 className="text-3xl md:text-5xl font-extrabold tracking-widest text-white mb-8 md:mb-16 text-center">
@@ -64,11 +39,12 @@ export default function Projects() {
                     </h3>
                 </div>
 
-                <motion.div style={{ x }} className="flex gap-6 md:gap-8 px-6 md:px-24 w-max">
+                <motion.div ref={innerRef} style={{ x }} className="flex gap-6 md:gap-8 px-6 md:px-24 w-max">
                     {projects.map((project, index) => (
-                        <div
+                        <Link
                             key={index}
-                            className="group relative flex flex-col w-[300px] sm:w-[350px] md:w-[450px] shrink-0 rounded-[2rem] overflow-hidden border border-white/10 bg-[#121214] transition-all duration-500 ease-in-out hover:border-cyan-500/60 hover:shadow-[0_0_40px_-5px_rgba(34,211,238,0.35)]"
+                            href={`/projects#${project.slug}`}
+                            className="group relative flex flex-col w-[300px] sm:w-[350px] md:w-[450px] shrink-0 rounded-[2rem] overflow-hidden border border-white/10 bg-[#121214] transition-all duration-500 ease-in-out hover:border-cyan-500/60 hover:shadow-[0_0_40px_-5px_rgba(34,211,238,0.35)] no-underline"
                         >
                             {/* Glow radial layer — fades in on hover */}
                             <div className="pointer-events-none absolute inset-0 z-0 rounded-[2rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500"
@@ -113,31 +89,28 @@ export default function Projects() {
                                             </span>
                                         ))}
                                     </div>
-                                    <button
-                                        onClick={() => setIsComingSoonOpen(true)}
+                                    <div
                                         className="w-10 h-10 shrink-0 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-white/10 transition-colors group/btn"
                                     >
                                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" className="w-4 h-4 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 19L19 5m0 0v10m0-10H9" /></svg>
-                                    </button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
 
                     {/* View All Projects Ending Card */}
-                    <div
-                        onClick={() => setIsComingSoonOpen(true)}
-                        className="w-[200px] md:w-[300px] shrink-0 flex flex-col items-center justify-center px-12 group cursor-pointer"
+                    <Link
+                        href="/projects"
+                        className="w-[200px] md:w-[300px] shrink-0 flex flex-col items-center justify-center px-12 group cursor-pointer no-underline"
                     >
                         <div className="w-12 h-12 md:w-16 md:h-16 rounded-full border border-white/10 flex items-center justify-center text-white mb-6 group-hover:bg-white/5 transition-colors group-hover:scale-105 duration-300">
                             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" className="w-5 h-5 md:w-6 md:h-6"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                         </div>
                         <h4 className="text-xl md:text-2xl font-bold text-white text-center tracking-tight">View All<br />Projects</h4>
-                    </div>
+                    </Link>
                 </motion.div>
             </div>
-
-            <ComingSoonPopup isOpen={isComingSoonOpen} onClose={() => setIsComingSoonOpen(false)} />
         </section>
     );
 }

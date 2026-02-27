@@ -48,8 +48,10 @@ export default function ExperienceSection() {
     // We will reverse the array for rendering so Past is on left, Present is on right.
     const timelineData = [...experiences].reverse();
 
-    // The entire timeline translates leftwards as we scroll down
-    const x = useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]);
+    // The entire timeline translates leftwards as we scroll down.
+    // By using "calc(-100% + 100vw)", we ensure the timeline will scroll exactly to its end
+    // across all device sizes (mobile, tablet, desktop).
+    const x = useTransform(scrollYProgress, [0, 1], ["calc(0% + 0vw)", "calc(-100% + 100vw)"]);
 
     return (
         <section ref={targetRef} className="relative h-[250vh] bg-[#0a0a0a] z-20">

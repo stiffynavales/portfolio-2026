@@ -3,20 +3,20 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const stats = [
-    { highlight: "Microsoft Certified:", text: " Azure Fundamentals" },
-    { highlight: "Oracle Cloud Certified: ", text: "2025 AI Foundations Associate" },
-    { highlight: "5+", text: "Years of Experience in IT Support Industry" },
-    { highlight: "2+", text: "Years of Web Development Experience" }
+const items = [
+    "Web Development",
+    "UI/UX",
+    "Product Design",
+    "AI Agents"
 ];
 
 export default function InfiniteMarquee() {
-    // We duplicate the array multiple times to ensure the container is wide enough 
+    // Duplicate the array multiple times to ensure the container is wide enough 
     // to fill the screen and allow for a seamless 50% translation loop.
-    const repeatedStats = [...stats, ...stats, ...stats, ...stats, ...stats, ...stats];
+    const repeatedItems = [...items, ...items, ...items, ...items, ...items, ...items];
 
     return (
-        <section className="w-full bg-[#080808] border-y border-white/5 py-6 overflow-hidden flex relative z-20">
+        <section className="w-full bg-[#050505] border-y border-white/5 py-10 md:py-16 overflow-hidden flex relative z-20">
             {/* 
               By animating from 0% to -50%, we shift exactly half of the duplicated content.
               Because the first half and second half are identical, the loop is completely seamless.
@@ -26,20 +26,20 @@ export default function InfiniteMarquee() {
                 transition={{
                     repeat: Infinity,
                     ease: "linear",
-                    duration: 40, // Adjust this to make it scroll faster/slower
+                    duration: 35, // Adjust this to make it scroll faster/slower
                 }}
-                className="flex shrink-0 w-max items-center"
+                className="flex shrink-0 w-max items-center uppercase"
             >
-                {repeatedStats.map((stat, index) => (
-                    <div key={index} className="flex items-center">
-                        <span className="text-xl md:text-2xl font-bold text-[#5ce1e6] mr-2 tracking-wide">
-                            {stat.highlight}
+                {repeatedItems.map((item, index) => (
+                    <div key={index} className="flex items-center group">
+                        <span
+                            className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight text-transparent px-4 md:px-8 transition-all duration-300 hover:text-white cursor-default"
+                            style={{ WebkitTextStroke: '2px rgba(255,255,255,0.7)' }}
+                        >
+                            {item}
                         </span>
-                        <span className="text-xl md:text-2xl text-white font-medium tracking-wide">
-                            {stat.text}
-                        </span>
-                        <span className="mx-8 md:mx-12 text-neutral-600 font-bold text-xl md:text-2xl">
-                            •
+                        <span className="text-4xl md:text-6xl text-cyan-200 mx-4 md:mx-8">
+                            ✺
                         </span>
                     </div>
                 ))}
