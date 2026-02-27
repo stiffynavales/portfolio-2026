@@ -178,7 +178,7 @@ export default function ProjectsPage() {
                                                         rel="noopener noreferrer"
                                                         className="inline-flex items-center gap-3 px-6 py-3 bg-cyan-500/10 border border-cyan-500/30 rounded-2xl text-cyan-300 text-sm font-bold tracking-wide hover:bg-cyan-500/20 hover:border-cyan-400/50 transition-all duration-300 no-underline group/visit"
                                                     >
-                                                        Visit Live Site
+                                                        {project.linkText || 'Visit Live Site'}
                                                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" className="w-4 h-4 group-hover/visit:translate-x-0.5 group-hover/visit:-translate-y-0.5 transition-transform">
                                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 19L19 5m0 0v10m0-10H9" />
                                                         </svg>

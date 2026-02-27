@@ -10,6 +10,7 @@ export interface Project {
     tags: string[];
     image: string;
     link?: string;
+    linkText?: string;
 }
 
 export const projects: Project[] = [
@@ -23,7 +24,9 @@ export const projects: Project[] = [
         role: "UI/UX Designer & Frontend Developer",
         tools: ["Figma", "WordPress", "Elementor Pro", "Custom CSS", "Adobe Photoshop"],
         tags: ["Figma", "UI/UX", "Landing Page", "Wordpress", "AI"],
-        image: "/lp-harmonystream.png"
+        image: "/lp-harmonystream.png",
+        link: "https://www.figma.com/design/WMQ7xrDW5nW8Rbc4OIYQ2r/Portfolio?node-id=1-246&t=6vBdWPdla4UjlY0Y-1",
+        linkText: "View in Figma Portfolio"
     },
     {
         slug: "whey-protein",
@@ -35,7 +38,9 @@ export const projects: Project[] = [
         role: "UI/UX Designer",
         tools: ["Figma", "Adobe Illustrator", "Unsplash", "Google Fonts"],
         tags: ["Figma", "UI/UX", "Landing Page", "Wordpress", "AI"],
-        image: "/lp-whey.png"
+        image: "/lp-whey.png",
+        link: "https://www.figma.com/design/WMQ7xrDW5nW8Rbc4OIYQ2r/Portfolio?node-id=1-3&t=6vBdWPdla4UjlY0Y-1",
+        linkText: "View in Figma Portfolio"
     },
     {
         slug: "car-variants",
@@ -47,7 +52,9 @@ export const projects: Project[] = [
         role: "UI/UX Designer & Prototype Developer",
         tools: ["Figma", "Figma Prototyping", "WordPress", "Elementor", "AI Image Generation"],
         tags: ["Figma", "UI/UX", "Landing Page", "Wordpress", "AI", "Prototype"],
-        image: "/ptype-variants.png"
+        image: "/ptype-variants.png",
+        link: "https://www.figma.com/proto/BF8xi8Zr91K1TDIoznRsZG/Isuzu-Dmax-Landing-Page?node-id=35-39&t=COyaIylTbGAEpZZC-1&starting-point-node-id=3%3A2",
+        linkText: "View Figma Prototype"
     },
     {
         slug: "marc-photography",
