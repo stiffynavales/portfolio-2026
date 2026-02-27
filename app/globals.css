@@ -19,3 +19,38 @@ body {
   overflow-x: hidden;
   background-color: #121212;
 }
+
+/* Animated modal scrollbar */
+@keyframes scrollbar-glow {
+  0%   { background-position: 0% 0%; }
+  50%  { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+.modal-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 999px;
+}
+
+.modal-scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: linear-gradient(180deg, #22d3ee, #a855f7, #22d3ee);
+  background-size: 100% 300%;
+  animation: scrollbar-glow 4s ease infinite;
+}
+
+.modal-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #67e8f9, #c084fc, #67e8f9);
+  background-size: 100% 300%;
+  animation: scrollbar-glow 2s ease infinite;
+}
+
+/* Firefox */
+.modal-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #22d3ee rgba(255, 255, 255, 0.03);
+}

@@ -68,5 +68,19 @@ export const projects: Project[] = [
         tags: ["Next.js", "UI/UX", "Google Stitch", "Whisk", "AI", "Vercel"],
         link: "https://marc-photography.vercel.app/",
         image: "/mp-logo-thumbnail.jpg"
+    },
+    {
+        slug: "steinvens-web-lab",
+        year: "2026",
+        title: "Steinvens Web Lab",
+        category: "3D Website",
+        description: "A cutting-edge 3D website for a modern web agency, featuring immersive interactive elements and a stunning visual language.",
+        details: "Designed and developed an immersive 3D web experience for Steinvens Web Lab. The website pushes the boundaries of modern web development, utilizing web-based 3D graphics to create a memorable and engaging digital environment for a forward-thinking web agency. Key features include an interactive 3D hero section, dynamic portfolio showcases, and smooth scroll-triggered animations. The project highlights advanced WebGL integration intertwined with modern UI/UX principles, creating a unique intersection between creative design and technical excellence.",
+        role: "Creative Developer & 3D Designer",
+        tools: ["React", "Three.js", "React Three Fiber", "Tailwind CSS", "Framer Motion"],
+        tags: ["3D Website", "UI/UX", "React", "Three.js", "Web Agency"],
+        image: "/project-thumbnail-5.png",
+        link: "https://steinvens.vercel.app/",
+        linkText: "View 3D Interactive Website"
     }
 ];

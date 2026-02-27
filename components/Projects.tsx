@@ -40,7 +40,7 @@ export default function Projects() {
                 </div>
 
                 <motion.div ref={innerRef} style={{ x }} className="flex gap-6 md:gap-8 px-6 md:px-24 w-max">
-                    {projects.map((project, index) => (
+                    {projects.slice(0, 4).map((project, index) => (
                         <Link
                             key={index}
                             href={`/projects#${project.slug}`}
