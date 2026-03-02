@@ -6,15 +6,15 @@ import Link from 'next/link';
 import { projects, Project } from '@/lib/projectsData';
 import Footer from '@/components/Footer';
 
-const categories = ['All', 'Figma Designs', 'AI Web Designs'] as const;
+const categories = ['All', 'Figma Designs', 'Live Web Designs'] as const;
 type Category = typeof categories[number];
 
 const categoryMap: Record<string, Category> = {
     'harmony-stream': 'Figma Designs',
     'whey-protein': 'Figma Designs',
     'car-variants': 'Figma Designs',
-    'marc-photography': 'AI Web Designs',
-    'steinvens-web-lab': 'AI Web Designs',
+    'marc-photography': 'Live Web Designs',
+    'steinvens-web-lab': 'Live Web Designs',
 };
 
 export default function ProjectsPage() {
