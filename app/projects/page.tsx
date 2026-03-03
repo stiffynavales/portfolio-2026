@@ -15,6 +15,7 @@ const categoryMap: Record<string, Category> = {
     'car-variants': 'Figma Designs',
     'marc-photography': 'Live Web Designs',
     'steinvens-web-lab': 'Live Web Designs',
+    'brew-and-bound': 'Live Web Designs',
 };
 
 export default function ProjectsPage() {

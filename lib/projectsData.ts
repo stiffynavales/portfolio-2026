@@ -82,5 +82,19 @@ export const projects: Project[] = [
         image: "/project-thumbnail-5.png",
         link: "https://steinvens.vercel.app/",
         linkText: "View 3D Interactive Website"
+    },
+    {
+        slug: "brew-and-bound",
+        year: "2026",
+        title: "Brew & Bound",
+        category: "Landing Page",
+        description: "A digital experience where specialty coffee meets precision, designed with a premium, luxurious aesthetic.",
+        details: "Designed and developed the landing page for Brew & Bound, a modern coffee brand. Created a visually striking 'Midnight Luxe' theme utilizing sophisticated typography like Playfair Display and Inter. The interface integrates subtle visual elements like SVG noise overlays to give a rich, tactile feel that highlights the premium nature of the brand.",
+        role: "Front-End Developer & UI Designer",
+        tools: ["React", "Vite", "Tailwind CSS"],
+        tags: ["React", "UI/UX", "Landing Page", "Vite"],
+        image: "/project-thumbnail-6.png",
+        link: "https://bound-brew-coffee.vercel.app/",
+        linkText: "View Live Website"
     }
 ];
