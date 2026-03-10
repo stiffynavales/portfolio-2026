@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { projects, Project } from '@/lib/projectsData';
 import Footer from '@/components/Footer';
 
-const categories = ['All', 'Figma Designs', 'Live Web Designs'] as const;
+const categories = ['All', 'Figma Designs', 'Live Web Designs', 'Wordpress Websites'] as const;
 type Category = typeof categories[number];
 
 const categoryMap: Record<string, Category> = {
@@ -16,6 +16,9 @@ const categoryMap: Record<string, Category> = {
     'marc-photography': 'Live Web Designs',
     'steinvens-web-lab': 'Live Web Designs',
     'brew-and-bound': 'Live Web Designs',
+    'amp-electric-hvac': 'Wordpress Websites',
+    'century-air': 'Wordpress Websites',
+    'drainmaster-ohio': 'Wordpress Websites',
 };
 
 export default function ProjectsPage() {
@@ -181,8 +184,19 @@ export default function ProjectsPage() {
 
                                             {/* Card Content Area */}
                                             <div className="p-6 md:p-8 flex flex-col flex-1 border-t border-white/5 relative z-10 bg-[#121214]">
-                                                <h5 className="text-[10px] font-bold tracking-widest text-cyan-400 uppercase mb-3">
-                                                    {project.category}
+                                                <h5 className="text-[10px] font-bold tracking-widest text-cyan-400 uppercase mb-3 flex items-center justify-between">
+                                                    <span>{project.category}</span>
+                                                    {project.category === 'Wordpress Websites' && (
+                                                        <div className="group/tooltip relative" onClick={(e) => e.stopPropagation()}>
+                                                            <svg className="w-4 h-4 text-orange-400/80 hover:text-orange-400 transition-colors cursor-help" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                            </svg>
+                                                            <div className="absolute bottom-full right-0 mb-2 w-48 md:w-56 p-3 bg-neutral-900 border border-white/10 rounded-xl text-xs text-neutral-300 opacity-0 group-hover/tooltip:opacity-100 pointer-events-none transition-opacity z-50 shadow-xl font-normal normal-case tracking-normal">
+                                                                <span className="font-bold text-orange-400 block mb-1">Agency Work</span>
+                                                                These projects belong to the agency I work for. I am including them here for reference purposes.
+                                                            </div>
+                                                        </div>
+                                                    )}
                                                 </h5>
                                                 <h4 className="text-xl md:text-2xl font-bold text-white mb-4 tracking-tight">
                                                     {project.title}
@@ -287,6 +301,19 @@ export default function ProjectsPage() {
                                     <div className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></div>
                                     <span className="text-xs font-bold tracking-widest text-cyan-400 uppercase">{selectedProject.role}</span>
                                 </div>
+
+                                {/* Disclaimer logic here */}
+                                {selectedProject.category === 'Wordpress Websites' && (
+                                    <div className="mb-6 p-4 rounded-xl bg-orange-500/10 border border-orange-500/30 flex items-start gap-3">
+                                        <svg className="w-5 h-5 text-orange-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                                        </svg>
+                                        <p className="text-orange-300/90 text-sm leading-relaxed">
+                                            <span className="font-bold text-orange-400 block mb-1">Disclaimer</span>
+                                            These projects belong to the agency I work for. I am including them here for reference purposes.
+                                        </p>
+                                    </div>
+                                )}
 
                                 {/* Description */}
                                 <p className="text-neutral-400 text-sm leading-relaxed mb-6 pb-6 border-b border-white/5">

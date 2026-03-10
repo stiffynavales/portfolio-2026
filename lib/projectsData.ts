@@ -96,5 +96,47 @@ export const projects: Project[] = [
         image: "/project-thumbnail-6.png",
         link: "https://bound-brew-coffee.vercel.app/",
         linkText: "View Live Website"
+    },
+    {
+        slug: "amp-electric-hvac",
+        year: "2026",
+        title: "HVAC and Electrician Company Website",
+        category: "Wordpress Websites",
+        description: "Trusted HVAC, AC & furnace repair plus expert electrical services.",
+        details: "Built an informative and conversion-focused WordPress website for Amp Electric using Elementor. The site highlights their trusted HVAC and electrical services in Muskegon, MI, providing an easy way for customers to request service and view special offers.",
+        role: "Frontend Developer",
+        tools: ["WordPress", "Elementor", "CSS"],
+        tags: ["WordPress", "Elementor", "HVAC", "Electrical Services"],
+        image: "/project-thumbnail-7.png",
+        link: "https://ampelectrichvac.com/",
+        linkText: "Visit Live Site"
+    },
+    {
+        slug: "century-air",
+        year: "2026",
+        title: "HVAC and Wine cellar Company Website",
+        category: "Wordpress Websites",
+        description: "HVAC and wine cellar services in Las Vegas, NV providing straightforward help and dependable comfort solutions.",
+        details: "Developed a professional service website for Century Air using WordPress and Elementor. Features include emergency service contacts, special offers sections, and detailed service pages for HVAC and customized wine cellar cooling solutions.",
+        role: "Frontend Developer",
+        tools: ["WordPress", "Elementor", "CSS"],
+        tags: ["WordPress", "Elementor", "HVAC", "Wine Cellar"],
+        image: "/project-thumbnail-8.png",
+        link: "https://centuryairinc.com/",
+        linkText: "Visit Live Site"
+    },
+    {
+        slug: "drainmaster-ohio",
+        year: "2026",
+        title: "Plumbing Company Website",
+        category: "Wordpress Websites",
+        description: "Trusted plumbing and drain cleaning experts in Columbus, OH focused on quality workmanship.",
+        details: "Built an engaging and highly functional Elementor-based WordPress site for DrainMaster. The platform serves residential and commercial clients in Columbus, OH, offering quick access to 24/7 plumbing services and customer testimonials.",
+        role: "Frontend Developer",
+        tools: ["WordPress", "Elementor", "CSS"],
+        tags: ["WordPress", "Elementor", "Plumbing", "Drain Cleaning"],
+        image: "/project-thumbnail-9.png",
+        link: "https://drainmasterohio.com/",
+        linkText: "Visit Live Site"
     }
 ];
