@@ -13,7 +13,7 @@ export default function HeroSection() {
     });
 
     return (
-        <div ref={containerRef} className="relative h-[500vh] w-full z-10">
+        <div id="hero" ref={containerRef} className="relative h-[500vh] w-full z-10">
             <div className="sticky top-0 h-screen w-full overflow-hidden pointer-events-none">
                 <ScrollyCanvas scrollProgress={scrollYProgress} />
             </div>

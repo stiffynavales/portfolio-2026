@@ -54,7 +54,7 @@ export default function ExperienceSection() {
     const x = useTransform(scrollYProgress, [0, 1], ["calc(0% + 0vw)", "calc(-100% + 100vw)"]);
 
     return (
-        <section ref={targetRef} className="relative h-[250vh] bg-[#0a0a0a] z-20">
+        <section id="experience" ref={targetRef} className="relative h-[250vh] bg-[#0a0a0a] z-20">
             <div className="sticky top-0 h-screen flex flex-col justify-center overflow-hidden">
 
                 <h3 className="absolute top-24 left-1/2 -translate-x-1/2 text-4xl md:text-5xl font-extrabold tracking-widest text-[#5ce1e6] z-50">

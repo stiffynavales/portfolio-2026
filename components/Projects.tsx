@@ -31,7 +31,7 @@ export default function Projects() {
     const x = useTransform(scrollYProgress, [0, 1], [0, endX]);
 
     return (
-        <section ref={targetRef} className="relative h-[180vh] bg-[#0a0a0a] z-20">
+        <section id="projects" ref={targetRef} className="relative h-[180vh] bg-[#0a0a0a] z-20">
             <div className="sticky top-0 h-screen flex flex-col justify-center overflow-hidden">
                 <div className="w-full max-w-[1400px] mx-auto px-6 md:px-24">
                     <h3 className="text-3xl md:text-5xl font-extrabold tracking-widest text-white mb-8 md:mb-16 text-center">

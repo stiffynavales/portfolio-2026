@@ -38,7 +38,7 @@ export default function TechArsenal() {
     });
 
     return (
-        <section ref={sectionRef} className="relative h-[300vh] bg-[#0a0a0a] z-20">
+        <section id="skills" ref={sectionRef} className="relative h-[300vh] bg-[#0a0a0a] z-20">
             <div className="sticky top-0 h-screen flex flex-col items-center justify-center overflow-hidden">
 
                 <h3 className="text-4xl md:text-6xl font-extrabold tracking-widest text-[#5ce1e6] mb-24 z-50 uppercase drop-shadow-[0_0_15px_rgba(92,225,230,0.4)]">

@@ -9,11 +9,18 @@ import Projects from '@/components/Projects';
 import TechArsenal from '@/components/TechArsenal';
 import ExperienceSection from '@/components/ExperienceSection';
 import Footer from '@/components/Footer';
+import Navbar from '@/components/Navbar';
+import ResumeModal from '@/components/ResumeModal';
+import { useState } from 'react';
 
 export default function Home() {
+    const [resumeOpen, setResumeOpen] = useState(false);
+
     return (
         <>
             <Preloader />
+            <Navbar onResumeClick={() => setResumeOpen(true)} />
+            <ResumeModal isOpen={resumeOpen} onClose={() => setResumeOpen(false)} />
             <main className="relative min-h-screen w-full bg-[#121212]">
                 {/* Hero Section: 500vh container for the scroll-linked sequence animation */}
                 <HeroSection />
