@@ -138,5 +138,19 @@ export const projects: Project[] = [
         image: "/project-thumbnail-9.png",
         link: "https://drainmasterohio.com/",
         linkText: "Visit Live Site"
+    },
+    {
+        slug: "event-promotion-system",
+        year: "2026",
+        title: "Event Promotion System",
+        category: "Live Web Design",
+        description: "A Next.js application designed to fully automate the onboarding and marketing asset creation for decentralized event hosts.",
+        details: "Developed a comprehensive system that automates the onboarding process and generates marketing assets for event hosts. The platform integrates OpenAI API to dynamically create compelling landing page copy, automated email sequences, and social media templates. It utilizes Vercel KV for global edge persistence, SendGrid for automated email dispatch, and Google Drive API for specialized asset storage. Additionally, it dynamically generates live registration pages for each host and provides an Admin Dashboard to oversee platform operations.",
+        role: "Full-Stack Developer",
+        tools: ["Next.js", "React", "Tailwind CSS", "Vercel KV", "OpenAI API", "SendGrid", "Google Drive API"],
+        tags: ["Next.js", "AI", "Automation", "Full-Stack"],
+        image: "/project-thumbnail-10.png",
+        link: "https://event-promo-system.vercel.app/",
+        linkText: "Visit Live Site"
     }
 ];
