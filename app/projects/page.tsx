@@ -20,6 +20,10 @@ const categoryMap: Record<string, Category> = {
     'century-air': 'Wordpress Websites',
     'drainmaster-ohio': 'Wordpress Websites',
     'event-promotion-system': 'Live Web Designs',
+    'heroac': 'Wordpress Websites',
+    'thacc': 'Wordpress Websites',
+    'elitehvacs': 'Wordpress Websites',
+    'hopehvac': 'Wordpress Websites',
 };
 
 export default function ProjectsPage() {

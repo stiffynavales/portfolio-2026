@@ -152,5 +152,61 @@ export const projects: Project[] = [
         image: "/project-thumbnail-10.png",
         link: "https://event-promo-system.vercel.app/",
         linkText: "Visit Live Site"
+    },
+    {
+        slug: "heroac",
+        year: "2026",
+        title: "HVAC Company Website",
+        category: "Wordpress Websites",
+        description: "Professional HVAC services in Colorado — heating, cooling, and air quality solutions for residential and commercial clients.",
+        details: "Developed a modern, conversion-focused WordPress website for Hero AC using Elementor. The site showcases their full range of HVAC services across Colorado, with clear service pages, an easy contact flow, and trust-building elements such as customer reviews and certifications. The design prioritizes user experience with fast navigation and prominent calls-to-action for scheduling service appointments.",
+        role: "Frontend Developer",
+        tools: ["WordPress", "Elementor", "CSS"],
+        tags: ["WordPress", "Elementor", "HVAC", "Colorado"],
+        image: "/project-thumbnail-11.png",
+        link: "https://www.heroac.com/",
+        linkText: "Visit Live Site"
+    },
+    {
+        slug: "thacc",
+        year: "2026",
+        title: "AC & Plumbing Company Website",
+        category: "Wordpress Websites",
+        description: "Comprehensive AC and plumbing services in Texas — providing reliable comfort and plumbing solutions for homes and businesses.",
+        details: "Built a professional service website for THACC using WordPress and Elementor. The platform covers their extensive AC repair, installation, and plumbing services across Texas. Key site features include service area maps, detailed service breakdowns, and an easy-to-navigate contact system to convert visitors into booked appointments quickly.",
+        role: "Frontend Developer",
+        tools: ["WordPress", "Elementor", "CSS"],
+        tags: ["WordPress", "Elementor", "HVAC", "Plumbing", "Texas"],
+        image: "/project-thumbnail-12.png",
+        link: "https://www.thacc.net/",
+        linkText: "Visit Live Site"
+    },
+    {
+        slug: "elitehvacs",
+        year: "2026",
+        title: "Elite HVAC Company Website",
+        category: "Wordpress Websites",
+        description: "Elite HVAC services delivering top-tier heating, ventilation, and air conditioning solutions with a focus on quality and customer satisfaction.",
+        details: "Designed and developed a sleek, professional WordPress website for Elite HVAC using Elementor. The site emphasizes their premium positioning in the HVAC market with a clean layout, high-quality imagery, and detailed service offerings. Features include a structured service pages, client testimonials, financing options section, and an integrated contact form to streamline customer acquisition.",
+        role: "Frontend Developer",
+        tools: ["WordPress", "Elementor", "CSS"],
+        tags: ["WordPress", "Elementor", "HVAC", "Elite Services"],
+        image: "/project-thumbnail-13.png",
+        link: "https://elitehvacs.com/",
+        linkText: "Visit Live Site"
+    },
+    {
+        slug: "hopehvac",
+        year: "2026",
+        title: "Hope HVAC Company Website",
+        category: "Wordpress Websites",
+        description: "Dependable HVAC services built on trust — providing heating, cooling, and air quality solutions to homes and businesses.",
+        details: "Developed a warm, welcoming WordPress website for Hope HVAC using Elementor. The site reflects the company's commitment to honest, dependable service with a clean and approachable design. Key elements include service highlights, a clear call-to-action for emergency services, customer testimonials, and an easy-to-use contact form to help homeowners and businesses reach the team quickly.",
+        role: "Frontend Developer",
+        tools: ["WordPress", "Elementor", "CSS"],
+        tags: ["WordPress", "Elementor", "HVAC", "Heating", "Cooling"],
+        image: "/project-thumbnail-14.png",
+        link: "https://hopehvac.com/",
+        linkText: "Visit Live Site"
     }
 ];
